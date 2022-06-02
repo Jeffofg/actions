@@ -1,0 +1,10 @@
+name: ionic
+on: push
+jobs:
+  check-ionic-version:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+    - run: npm install -g @ionic/cli
+    - run: ng --version
